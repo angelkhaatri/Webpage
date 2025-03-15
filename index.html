@@ -99,30 +99,111 @@
     </div>
   </div>
 
-  <!-- Deals & Discounts Section -->
-<div class="container mt-5 text-white">
-  <h2 class="text-center">Deals & Discounts</h2>
+  <div class="container-fluid bg-dark text-white text-center p-3 w">
+    <div class="row">
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-4"> 
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div>
+  </div>   
+      
+    
+  <body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Left Section -->
+            <div class="col-md-6 left-section">
+                <div class="content">
+                    <h5>Start Your Journey</h5>
+                    <h1>Explore & Travel the World</h1>
+                    <p>Find the best destinations and book your dream vacation with ease.</p>
+                    <a href="#" class="btn btn-custom">Discover More</a>
+                </div>
+                <div class="image-container">
+                    <img src="https://static.independent.co.uk/2024/01/05/15/newFile-6.jpg" alt="Travel Image" class="img-fluid">
+                </div>
+            </div>
+            <!-- Right Section -->
+            <div class="col-md-6 right-section">
+                <h2>TravelEase</h2>
+                <p>Your trusted partner for hassle-free travel bookings and amazing adventures.</p>
+                <p><em>"Travel far, explore more, and make unforgettable memories with us!"</em></p>
+                <div class="social-icons">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+ <!-- Deals & Discounts Section -->
+<section class="container my-5">
   <div class="row">
+      <div class="col-md-8 mx-auto text-center">
+          <h2 class="fw-bold">🔥 Hot Deals & Discounts 🔥</h2>
+          <p class="text-muted">Grab special offers, last-minute deals, and exclusive discounts before they're gone!</p>
+      </div>
+  </div>
+
+  <div class="row mt-4">
+      <!-- Limited-Time Offer with Countdown Timer -->
       <div class="col-md-6">
-          <div class="deal-box">
-              <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-19290,resizemode-75,msid-116489473/nri/visit/nearly-half-of-indian-international-travellers-made-last-minute-flight-bookings-in-2024-foreign-trip-new-years.jpg" alt="Discount Deal" class="img-fluid">
-              <h4>Last-Minute Getaway</h4>
-              <p>Save up to 30% on select destinations.</p>
-              <p class="timer">Offer ends in: <span id="countdown"></span></p>
-              <button class="btn btn-primary">Book Now</button>
+          <div class="card deal-card position-relative">
+              <img src="https://t4.ftcdn.net/jpg/00/65/48/25/360_F_65482539_C0ZozE5gUjCafz7Xq98WB4dW6LAhqKfs.jpg" class="card-img-top" alt="Travel Discount">
+              <div class="card-body text-center">
+                  <h4 class="fw-bold">Limited-Time Offer! ✈️</h4>
+                  <p>Save up to <strong>30% OFF</strong> on select destinations!</p>
+                  <div id="countdown" class="countdown-timer">00d 00h 00m 00s</div>
+                  <a href="#" class="btn btn-primary mt-3">Grab the Deal</a>
+              </div>
           </div>
       </div>
+
+      <!-- Loyalty Rewards & Member Discounts -->
       <div class="col-md-6">
-          <div class="deal-box">
-              <img src="https://bigseventravel.com/wp-content/uploads/2020/01/Coco-Plum-Cay-Belize.png" alt="Holiday Deal" class="img-fluid">
-              <h4>Holiday Special</h4>
-              <p>Exclusive discounts on holiday packages.</p>
-              <p class="timer">Offer ends in: <span id="countdown2"></span></p>
-              <button class="btn btn-primary">Explore Deals</button>
+          <div class="card deal-card">
+              <img src="https://youmatter.world/app/uploads/2019/11/travel-world.jpg" class="card-img-top" alt="Loyalty Rewards">
+              <div class="card-body text-center">
+                  <h4 class="fw-bold">🎉 Loyalty Rewards & Exclusive Member Discounts</h4>
+                  <p>Become a member and enjoy priority bookings, special discounts, and VIP rewards.</p>
+                  <a href="#" class="btn btn-success mt-3">Join Now</a>
+              </div>
           </div>
       </div>
   </div>
-</div>
+</section>
+
+<!-- Countdown Timer Script -->
+<script>
+  function startCountdown(duration) {
+      let timer = duration, days, hours, minutes, seconds;
+      setInterval(function () {
+          days = Math.floor(timer / (24 * 60 * 60));
+          hours = Math.floor((timer % (24 * 60 * 60)) / 3600);
+          minutes = Math.floor((timer % 3600) / 60);
+          seconds = Math.floor(timer % 60);
+
+          document.getElementById("countdown").innerHTML =
+              `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+          if (--timer < 0) {
+              document.getElementById("countdown").innerHTML = "Offer Expired!";
+          }
+      }, 1000);
+  }
+
+  window.onload = function () {
+      let offerTime = 3 * 24 * 60 * 60; // 3 days in seconds
+      startCountdown(offerTime);
+  };
+</script>
+
 
 
 <!-- Booking Categories -->
@@ -150,34 +231,6 @@
           <h5>Cruise Bookings</h5>
       </div>
   </div>
-</div>
-
-
-<!-- Travel Blog & Guides -->
-<div class="container mt-5">
-  <h2 class="text-center">Travel Blog & Guides</h2>
-  <div class="blog-section">
-      <article>
-          <img src="https://source.unsplash.com/500x300/?destination" alt="Top Destinations" class="img-fluid">
-          <h4>Top 10 Must-Visit Destinations</h4>
-          <p>Discover the most beautiful places to travel in 2025.</p>
-          <a href="#">Read More</a>
-      </article>
-      <article>
-          <img src="https://source.unsplash.com/500x300/?passport" alt="Visa Guide" class="img-fluid">
-          <h4>Visa Requirements for Different Countries</h4>
-          <p>Check the latest visa policies before you travel.</p>
-          <a href="#">Read More</a>
-      </article>
-  </div>
-</div>
-
-<!-- Loyalty & Rewards Program -->
-<div class="container mt-5 text-center">
-  <h2>Loyalty & Rewards Program</h2>
-  <img src="https://source.unsplash.com/500x300/?reward" alt="Rewards" class="img-fluid">
-  <p>Earn points on every booking and redeem exciting rewards!</p>
-  <button class="btn btn-success">Join Now</button>
 </div>
 
 

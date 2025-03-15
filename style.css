@@ -78,22 +78,160 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Deals & Discounts */
-.deal-box {
-  background: #212529; /* Light orange */
-  padding: 20px;
-  border-radius: 0px;
+.container-fluid {
+  padding: 0;
+}
+
+.left-section {
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin-bottom: 20px;
-  
+  min-height: 100vh;
+  overflow: hidden;
+  width: 65%; /* Left section takes 50% of the screen */
 }
-.deal-box img {
-  width: 100%;
-  border-radius: 8px;
+
+/* Image covering the full left section */
+.left-section .image-container img {
+  width: 100%; /* Image width = full left section */
+  height: 100vh; /* Image height = full viewport */
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
-.timer {
+
+/* Text container over the image */
+.left-section .content {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.right-section {
+  background-color: #212529; /* Yellow background */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px;
+  min-height: 100vh;
+  width: 35%; /* Right section takes 50% of the screen */
+}
+
+/* Pink info box */
+.info-box {
+  background-color: #ff6384; /* Pink color */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  width: 80%; /* Width adjustable */
+  max-width: 400px; /* Set a maximum width */
+}
+
+.btn-custom {
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
   font-weight: bold;
-  color: red;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.btn-custom:hover {
+  background-color: white;
+  color: #f4a63e;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #222;
+}
+
+
+/* Deals & Discounts Styling */
+.deal-card {
+  background-color: #e3f2fd;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.deal-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-body h4 {
+  color: #333;
+}
+
+.card-body p {
+  color: #555;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border: none;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color:#28a745
+ }
+
+.btn-success:hover {
+  background-color: #1e7e34;
+}
+
+/* Countdown Timer Styling */
+.countdown-timer {
+  font-size: 1.5rem;
+  font-weight:bold;
+  color: #dc3545;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 8px 15px;
+  border-radius: 8px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 
@@ -122,34 +260,10 @@ body {
   background: #007bff;
   color: white;
 }
-/* Travel Blog & Guides */
-.blog-section {
-  background: #212529; /* Light green */
-  padding: 20px;
-  border-radius: 0px;
-}
-.blog-section article {
-  background: #ffffff; /* White */
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-.blog-section img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-/* Loyalty & Rewards Program */
-.container-loyalty {
-  background: #ffcccb; /* Light coral */
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-}
 
 /* Interactive Map */
 .container-map {
-  background: #e8eaf6; /* Light lavender */
+  background: #212529; /* Light lavender */
   padding: 20px;
   text-align: center;
   width: 100%;
@@ -173,7 +287,7 @@ iframe {
 
 
 .footer {
-  background-color: #111;
+  background-color: #212529;
   color: #ccc;
   padding: 40px 0;
 }
