@@ -12,20 +12,23 @@
   
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+      <a class="navbar-brand" href="javascript:void(0)">TravelGo</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mynavbar">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)">About Us</a>
+            <a class="nav-link" href="javascript:void(0)">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)">Project</a>
+            <a class="nav-link" href="javascript:void(0)">Destinations</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)">Downloads</a>
+            <a class="nav-link" href="javascript:void(0)">Deals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)">Contacts</a>
           </li>
         </ul>
         <form class="d-flex">
@@ -40,6 +43,7 @@
     style="background: url(https://wallpapercave.com/wp/wp14642651.jpg) no-repeat center center/cover; min-height: 300px;">
     <h1>My First Bootstrap Page</h1>
     <p>Resize this responsive page to see the effect!</p> 
+    <a href="#deals" class="btn btn-primary">Start Booking</a>
   </div>
   
   <div class="container mt-5">
@@ -94,6 +98,156 @@
       <img src="https://acko-cms.ackoassets.com/canada_3_813fdb8b86.png" alt="Furniture">
     </div>
   </div>
+
+  <!-- Deals & Discounts Section -->
+<div class="container mt-5 text-white">
+  <h2 class="text-center">Deals & Discounts</h2>
+  <div class="row">
+      <div class="col-md-6">
+          <div class="deal-box">
+              <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-19290,resizemode-75,msid-116489473/nri/visit/nearly-half-of-indian-international-travellers-made-last-minute-flight-bookings-in-2024-foreign-trip-new-years.jpg" alt="Discount Deal" class="img-fluid">
+              <h4>Last-Minute Getaway</h4>
+              <p>Save up to 30% on select destinations.</p>
+              <p class="timer">Offer ends in: <span id="countdown"></span></p>
+              <button class="btn btn-primary">Book Now</button>
+          </div>
+      </div>
+      <div class="col-md-6">
+          <div class="deal-box">
+              <img src="https://bigseventravel.com/wp-content/uploads/2020/01/Coco-Plum-Cay-Belize.png" alt="Holiday Deal" class="img-fluid">
+              <h4>Holiday Special</h4>
+              <p>Exclusive discounts on holiday packages.</p>
+              <p class="timer">Offer ends in: <span id="countdown2"></span></p>
+              <button class="btn btn-primary">Explore Deals</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- Booking Categories -->
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Explore Our Booking Categories</h2>
+  <div class="row justify-content-center">
+      <div class="col-md-3 col-sm-6 category-box">
+          <img src="https://img.freepik.com/free-photo/air-ticket-flight-booking-concept_53876-133923.jpg" alt="Flights" class="img-fluid">
+          <h5>Flights</h5>
+      </div>
+      <div class="col-md-3 col-sm-6 category-box">
+          <img src="https://expressinnindia.com/wp-content/uploads/2024/07/Freesia-God-23.jpg" alt="Hotels & Stays" class="img-fluid">
+          <h5>Hotels & Stays</h5>
+      </div>
+      <div class="col-md-3 col-sm-6 category-box">
+          <img src="https://gokaizen.in/images/car-rental.png" alt="Car Rentals" class="img-fluid">
+          <h5>Car Rentals</h5>
+      </div>
+      <div class="col-md-3 col-sm-6 category-box">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_gsupFQsocWFb4HJHKXkytizbkOhs2vFFkg&s" alt="Tour Packages" class="img-fluid">
+          <h5>Tour Packages</h5>
+      </div>
+      <div class="col-md-3 col-sm-6 category-box">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFDgVpj0IqfiQ3-B_f_75SUzUMdEm0660j3g&s" alt="Cruise Bookings" class="img-fluid">
+          <h5>Cruise Bookings</h5>
+      </div>
+  </div>
+</div>
+
+
+<!-- Travel Blog & Guides -->
+<div class="container mt-5">
+  <h2 class="text-center">Travel Blog & Guides</h2>
+  <div class="blog-section">
+      <article>
+          <img src="https://source.unsplash.com/500x300/?destination" alt="Top Destinations" class="img-fluid">
+          <h4>Top 10 Must-Visit Destinations</h4>
+          <p>Discover the most beautiful places to travel in 2025.</p>
+          <a href="#">Read More</a>
+      </article>
+      <article>
+          <img src="https://source.unsplash.com/500x300/?passport" alt="Visa Guide" class="img-fluid">
+          <h4>Visa Requirements for Different Countries</h4>
+          <p>Check the latest visa policies before you travel.</p>
+          <a href="#">Read More</a>
+      </article>
+  </div>
+</div>
+
+<!-- Loyalty & Rewards Program -->
+<div class="container mt-5 text-center">
+  <h2>Loyalty & Rewards Program</h2>
+  <img src="https://source.unsplash.com/500x300/?reward" alt="Rewards" class="img-fluid">
+  <p>Earn points on every booking and redeem exciting rewards!</p>
+  <button class="btn btn-success">Join Now</button>
+</div>
+
+
+<!-- Interactive Map -->
+<div class="container-map">
+  <h2 class="text-center">Interactive Map</h2>
+  <div class="map-wrapper">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d505146.76607871364!2d114.74190714966153!3d-8.454654113239544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd141d3e8100fa1%3A0x24910fb14b24e690!2sBali%2C%20Indonesia!5e0!3m2!1sen!2sin!4v1742047898477!5m2!1sen!2sin" 
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
+
+ 
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Legal Section -->
+      <div class="col-md-3">
+        <h5>Legal</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">Privacy Notice</a></li>
+          <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+          <li><a href="#" class="footer-link">Legal Policies</a></li>
+          <li><a href="#" class="footer-link">Fraudulent Booking Websites</a></li>
+        </ul>
+      </div>
+
+      <!-- Careers Section -->
+      <div class="col-md-3">
+        <h5>Careers</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">Join Us</a></li>
+          <li><a href="#" class="footer-link">View Job Portal</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="col-md-3">
+        <h5>Contact</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">Sales</a></li>
+          <li><a href="#" class="footer-link">Support</a></li>
+          <li><a href="#" class="footer-link">Press Office</a></li>
+          <li><a href="#" class="footer-link">Brand Guidelines</a></li>
+        </ul>
+      </div>
+
+      <!-- Products Section -->
+      <div class="col-md-3">
+        <h5>Products</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">Travelport+</a></li>
+          <li><a href="#" class="footer-link">MyTravelport</a></li>
+          <li><a href="#" class="footer-link">Suppliers</a></li>
+          <li><a href="#" class="footer-link">APIs</a></li>
+          <li><a href="#" class="footer-link">Smartpoint Cloud</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center mt-4 border-top pt-3">
+      <p class="mb-0">© 2025 Travelport. All Rights Reserved</p>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
